@@ -27,18 +27,18 @@ jobs:
           command: mvn -B -DskipTests clean package
      
       - run:
-          name: Calculadora
+          name: Pruebas Calculadora
           command: mvn -Dtest=CalculadoraTest test
       # Then run your tests!
 
       - run:
-          name: Ejecutando pruebas mockito
+          name: Pruebas mockito
           command: mvn -Dtest=com.fca.calidad.servicio.UserServiceTest test
 
       - run:
-          name: Ejecutando pruebas katalon
+          name: Pruebas katalon
           command: mvn -Dtest=Test_Crud test
-      # Then run your tests!!
+      # Then run your tests!
       
       - store_test_results:
           path: target/surefire-reports
