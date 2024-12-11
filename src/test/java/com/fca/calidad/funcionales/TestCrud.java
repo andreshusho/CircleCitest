@@ -16,7 +16,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.time.Duration;
 
-public class Test_Crud_Agregar {
+public class TestCrud {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -28,7 +28,7 @@ public class Test_Crud_Agregar {
 	WebDriverManager.chromedriver().setup();
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
-    options.addArguments("--no-sandbox");
+    options.addArguments("--no-sandbox");	
     options.addArguments("--disable-dev-shm-usage");
 
     driver = new ChromeDriver();
@@ -49,7 +49,7 @@ public class Test_Crud_Agregar {
     driver.findElement(By.name("email")).sendKeys("andres@gmail.com");
     driver.findElement(By.name("age")).click();
     driver.findElement(By.name("age")).clear();
-    driver.findElement(By.name("age")).sendKeys("25");
+    driver.findElement(By.name("age")).sendKeys("22");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
     driver.findElement(By.name("email")).click();
